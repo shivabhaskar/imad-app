@@ -4,7 +4,7 @@ var pass = document.getElementById('pass');
 var loge = document.getElementById('button');
 loge.onclick = function ()
 {
-    if(user== hai && pass==hello)
+    if(user=='hai' && pass=='hello')
     {
         return ui/about.html;
     }
