@@ -3,8 +3,6 @@ var morgan = require('morgan');
 var path = require('path');
 
 var app = express();
-var user;
-var pass;
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
@@ -22,7 +20,9 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/verify', function (req, res) {
-    if(user=='hai' && pass=='hello')
+   var use = document.getElementById('user');
+   var pa = document.getElementById('pass');
+    if(use=='hai' && pa=='hello')
     {
   res.sendFile(path.join(__dirname, 'ui', 'about.html'));
 }
