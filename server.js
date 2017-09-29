@@ -3,6 +3,8 @@ var morgan = require('morgan');
 var path = require('path');
 
 var app = express();
+var user;
+var pass;
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
