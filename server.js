@@ -19,6 +19,18 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+app.get('/verify', function (req, res) {
+    if(user=='hai' && pass=='hello')
+    {
+  res.sendFile(path.join(__dirname, 'ui', 'about.html'));
+}
+else
+{
+    res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+}
+
+});
+
 app.get('/ui/main.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
