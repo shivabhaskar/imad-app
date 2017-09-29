@@ -20,8 +20,8 @@ app.get('/ui/madi.png', function (req, res) {
 });
 
 app.get('/verify', function (req, res) {
-   var use = document.getElementById('user');
-   var pa = document.getElementById('pass');
+   var use = document.getElementById('user').value;
+   var pa = document.getElementById('pass').value;
     if(use=='hai' && pa=='hello')
     {
   res.sendFile(path.join(__dirname, 'ui', 'about.html'));
